@@ -1,0 +1,29 @@
+{
+	"schemaVersion": 1,
+	"id": "soundslow",
+	"version": "${version}",
+	"name": "Sound Slow",
+	"description": "Slows all game sounds by pitch - tied to /tick rate (auto) or a manual factor - so that speeding the recorded video back up restores normal-sounding audio.",
+	"authors": [
+		"Tima"
+	],
+	"license": "MIT",
+	"environment": "client",
+	"entrypoints": {
+		"client": [
+			"dev.soundslow.SoundSlowClient"
+		]
+	},
+	"mixins": [
+		{
+			"config": "soundslow.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.0",
+		"minecraft": "~1.21.11",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
